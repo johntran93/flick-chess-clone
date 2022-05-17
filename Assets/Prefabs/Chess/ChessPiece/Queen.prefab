@@ -500,7 +500,6 @@ GameObject:
   - component: {fileID: 7557385453665102189}
   - component: {fileID: 7078463462938713558}
   - component: {fileID: -8319567027962887402}
-  - component: {fileID: 1291046693584170901}
   m_Layer: 3
   m_Name: Queen
   m_TagString: Untagged
@@ -622,18 +621,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chessPiece: 5
   _chessTeam: 1
---- !u!114 &1291046693584170901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7557385453665102190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91461ab57a7f75441ab612078b8c0b63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8080193703916826407
 GameObject:
   m_ObjectHideFlags: 0
