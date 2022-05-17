@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class ChessController : MonoBehaviour
 {
-
     private Transform _selected;
     private Transform _gridSelected;
     private bool _selecting = false;
