@@ -338,7 +338,6 @@ GameObject:
   - component: {fileID: 9151397335944227911}
   - component: {fileID: 1919893020375171651}
   - component: {fileID: -1026767025127305127}
-  - component: {fileID: -5913270258519288575}
   m_Layer: 3
   m_Name: King
   m_TagString: Untagged
@@ -457,15 +456,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chessPiece: 6
   _chessTeam: 1
---- !u!114 &-5913270258519288575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9151397335944227910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91461ab57a7f75441ab612078b8c0b63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
