@@ -109,7 +109,7 @@ public class ChessController : MonoBehaviour
 
         for (int i = 0; i < hitColliders.Length; i++)
         {
-            if (hitColliders[i].CompareTag("Grid") && hitColliders[i].GetComponent<Grid>()._occupied == false)
+            if (hitColliders[i].CompareTag("Grid") && hitColliders[i].GetComponent<Grid>().occupied == false)
             {
                 float newDistance = (_selected.transform.position - hitColliders[i].transform.position).magnitude;
                 // Debug.Log(newDistance);
