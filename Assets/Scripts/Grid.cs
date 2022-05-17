@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
-    public bool _occupied = false;
+    public bool occupied = false;
     // Start is called before the first frame update
     private void Update() {
-        if(_occupied){
+        if(occupied){
             
                 GetComponent<MeshRenderer>().material = GameManager.Instance.Material;
         }

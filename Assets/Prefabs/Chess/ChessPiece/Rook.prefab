@@ -132,7 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20ddc043e6f513743920c3cfd2d61957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chess: 3
+  _chessPiece: 2
+  _chessTeam: 1
 --- !u!114 &-2510223861438234179
 MonoBehaviour:
   m_ObjectHideFlags: 0

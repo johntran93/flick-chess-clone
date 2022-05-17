@@ -5,7 +5,7 @@ using System.IO;
 
 public class DataManager : MonoBehaviour
 {
-    public void SaveData(int coin, int level, ChessDefine chess  ){
+    public void SaveData(int coin, int level, ChessPiece chess  ){
         Player player = new Player();
         player.Coin = coin;
         player.Level = level;
@@ -20,7 +20,7 @@ public class Player
     public int Coin {get; set;}
     public int Level {get; set;}
     public GameObject ChessObject { get; set; }
-    public ChessDefine Chess { get; set; }
+    public ChessPiece Chess { get; set; }
     public ChessTeam Team { get; set; }
 }
 
@@ -31,7 +31,7 @@ public enum ChessTeam
 }
 
 
-public enum ChessDefine
+public enum ChessPiece
 {
     None = 0,
     Pawn = 1,

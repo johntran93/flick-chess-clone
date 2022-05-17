@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 
 public class ChessController : MonoBehaviour
 {
-
+    [SerializeField] private ChessPiece _chessPiece;
+    [SerializeField] private ChessTeam _chessTeam;
     private Transform _selected;
     private Transform _gridSelected;
     private bool _selecting = false;
@@ -15,11 +16,28 @@ public class ChessController : MonoBehaviour
     private Vector3 _oldPosition;
     private Vector3 mousePressDownPos;
     private Vector3 mouseReleasePos;
+    private Vector3 _colliderPos;
+    private Rigidbody _rb;
 
-     private Vector3 _colliderPos;
-
+    public ChessTeam ChessTeam
+    {
+        get
+        {
+            return _chessTeam;
+        }
+        set
+        {
+            _chessTeam = value;
+        }
+    }
+    public ChessPiece ChessPiece => _chessPiece;
     void Start()
     {
+        _rb = GetComponent<Rigidbody>();
+        if (gameObject.GetComponent<ChessController>().ChessTeam == ChessTeam.Enemy)
+        {
+            gameObject.GetComponent<Renderer>().material.color = Color.red;
+        }
         //grapInput = new GrapInput();
         //grapInput.Mouse.Enable();
         //grapInput.Mouse.LeftClick.started += OnLeftClick;
@@ -27,17 +45,23 @@ public class ChessController : MonoBehaviour
     }
     void Update()
     {
-        //MovingSelected();
-        if(GameManager.Instance.GameIsPlay == false){
-            MovingSelectedOldInput();
-            GetComponent<Rigidbody>().isKinematic = true;
-        }
-        else{
-            GetComponent<Rigidbody>().isKinematic = false;
-        }
-        if ((gameObject.transform.position.y < 2f) && gameObject.CompareTag("Chess"))
+        if (gameObject.transform.position.y < 2f && _chessTeam == ChessTeam.Enemy)
         {
-            PlayerDie();
+            Die();
+        }
+        //MovingSelected();
+        if (GameManager.Instance.GameIsPlay == false)
+        {
+            MovingSelectedOldInput();
+           _rb.isKinematic = true;
+        }
+        else
+        {
+            _rb.isKinematic = false;
+        }
+        if ((gameObject.transform.position.y < 2f) && _chessTeam == ChessTeam.Player)
+        {
+            Die();
         }
     }
     private void OnMouseDown()
@@ -67,13 +91,13 @@ public class ChessController : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        if(!GameManager.Instance.GameIsPlay)
+        if (!GameManager.Instance.GameIsPlay)
         {
-        OnMouseReleaseOldInput();
-        mouseReleasePos = Input.mousePosition;
-        _selecting = false;
-        
-        gameObject.transform.position = _gridSelected.transform.position;
+            OnMouseReleaseOldInput();
+            mouseReleasePos = Input.mousePosition;
+            _selecting = false;
+
+            gameObject.transform.position = _gridSelected.transform.position;
         }
     }
 
@@ -81,16 +105,16 @@ public class ChessController : MonoBehaviour
     {
         Collider[] hitColliders = Physics.OverlapSphere(_selected.transform.position, 20);
         Transform temp = gameObject.transform;
-        
+
         float distance = 99999;
 
-        
+
         for (int i = 0; i < hitColliders.Length; i++)
         {
-            if (hitColliders[i].CompareTag("Grid") && hitColliders[i].GetComponent<Grid>()._occupied == false)
+            if (hitColliders[i].CompareTag("Grid") && hitColliders[i].GetComponent<Grid>().occupied == false)
             {
                 float newDistance = (_selected.transform.position - hitColliders[i].transform.position).magnitude;
-                Debug.Log(newDistance);
+                // Debug.Log(newDistance);
                 if (newDistance < distance)
                 {
                     distance = newDistance;
@@ -114,46 +138,22 @@ public class ChessController : MonoBehaviour
         }
     }
 
-    private void PlayerDie()
+
+    public void Die()
     {
-        Destroy(gameObject);
-        GameManager.Instance.ListPlayer.Remove(gameObject);
-        if (gameObject.name == "King")
+        if (_chessTeam == ChessTeam.Enemy)
         {
-            Debug.Log(" ---------- Game Lose ----------");
+            GameManager.Instance.ListEnemy.Remove(gameObject);
+            GameManager.Instance.CheckWin();
+            GameManager.Instance.ChangeUp(GameManager.Instance.RaycastCheck.Check().transform.GetComponent<ChessController>().ChessPiece == ChessPiece.King);
+            if (gameObject.GetComponent<ChessController>().ChessPiece == ChessPiece.King)
+            {
+                GameManager.Instance.GameWin();
+            }
         }
+        else{
+            GameManager.Instance.GameOver();
+        }
+        Destroy(gameObject);
     }
-
-
-    // private Vector3 _colliderPos;
-
-    // private void Update()
-    // {
-    //     if ((gameObject.transform.position.y < 2f) && gameObject.CompareTag("Chess"))
-    //     {
-    //         PlayerDie();
-    //     }
-    // }
-    // private void OnCollisionEnter(Collision other)
-    // {
-    //     if (!other.gameObject.CompareTag("Ground") && !other.gameObject.CompareTag("Grid"))
-    //     {
-    //         ContactPoint contact = other.contacts[0];
-    //         _colliderPos = contact.point;
-    //         //Debug.Log(" Position on collider : " + _colliderPos);
-    //         Instantiate(GameManager.Instance.ParticleSystem, _colliderPos, Quaternion.identity);
-    //     }
-    // }
-
-    // private void PlayerDie()
-    // {
-    //     Destroy(gameObject);
-    //     GameManager.Instance.ListPlayer.Remove(gameObject);
-    //     if (gameObject.name == "King")
-    //     {
-    //         Debug.Log(" ---------- Game Lose ----------");
-    //     }
-    // }
-
-
 }
