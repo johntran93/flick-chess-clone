@@ -15,6 +15,8 @@ public class MoveThisChessFix : MonoBehaviour
     public GameObject CamPlay1, CamPlay2;
 
     public bool Round1Play, Round2Play;
+    public Transform AllChess, PointRound1, PointRound2;
+
 
 
     public GameObject floorLane, floorLane2;
@@ -33,7 +35,7 @@ public class MoveThisChessFix : MonoBehaviour
         Round2Play = false;
 
     }
-    
+
 
     public void moveChess()
     {
@@ -43,18 +45,22 @@ public class MoveThisChessFix : MonoBehaviour
         // _chess.DOMove(destinationRound1, 5f);
         for (int i = 0; i < _chess.Count; i++)
         {
-            _chess[i].DOMove(destinationRun1[i].position, 5f).SetDelay(0)
+            _chess[i].DOMove(destinationRun1[i].position, 2f)
             .OnComplete(() =>
             {
-                for (int j = 0; j < _chess.Count; j++)
+                AllChess.DOMove(PointRound1.position, 2f)
+                .OnComplete(() =>
                 {
-                    _chess[j].DOMove(destination[j].position, 5f)
-                    .OnComplete(() =>
+                    for (int j = 0; j < _chess.Count; j++)
                     {
-                        floorLane.SetActive(false);
-                        CamPlay1.SetActive(true);
-                    });
-                }
+                        _chess[j].DOMove(destination[j].position, 2f)
+                        .OnComplete(() =>
+                        {
+                            floorLane.SetActive(false);
+                            CamPlay1.SetActive(true);
+                        });
+                    }
+                });
             });
 
         }
@@ -70,18 +76,23 @@ public class MoveThisChessFix : MonoBehaviour
 
         for (int k = 0; k < _chess.Count; k++)
         {
-            _chess[k].DOMove(destinationRun2[k].position, 5f)
+            _chess[k].DOMove(destinationRun2[k].position, 2f)
             .OnComplete(() =>
             {
-                for (int h = 0; h < _chess.Count; h++)
+                AllChess.DOMove(PointRound2.position, 2f)
+                .OnComplete(() =>
                 {
-                    _chess[h].DOMove(destination2[h].position, 5f)
-                    .OnComplete(() =>
+                    for (int h = 0; h < _chess.Count; h++)
                     {
-                        floorLane2.SetActive(false);
-                        CamPlay2.SetActive(true);
-                    });
-                }
+                        _chess[h].DOMove(destination2[h].position, 2f)
+                        .OnComplete(() =>
+                        {
+                            floorLane2.SetActive(false);
+                            CamPlay2.SetActive(true);
+                        });
+                    }
+
+                });
             });
         }
     }
