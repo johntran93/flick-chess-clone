@@ -45,7 +45,7 @@ public class ChessController : MonoBehaviour
     }
     void Update()
     {
-        if (gameObject.transform.position.y < 2f && _chessTeam == ChessTeam.Enemy)
+        if (gameObject.transform.position.y < 2f && (_chessTeam == ChessTeam.Enemy || _chessTeam == ChessTeam.Player))
         {
             Die();
         }
@@ -53,15 +53,11 @@ public class ChessController : MonoBehaviour
         if (GameManager.Instance.GameIsPlay == false)
         {
             MovingSelectedOldInput();
-           _rb.isKinematic = true;
+            _rb.isKinematic = true;
         }
         else
         {
             _rb.isKinematic = false;
-        }
-        if ((gameObject.transform.position.y < 2f) && _chessTeam == ChessTeam.Player)
-        {
-            Die();
         }
     }
     private void OnMouseDown()
@@ -108,10 +104,9 @@ public class ChessController : MonoBehaviour
 
         float distance = 99999;
 
-
         for (int i = 0; i < hitColliders.Length; i++)
         {
-            if (hitColliders[i].CompareTag("Grid") && hitColliders[i].GetComponent<Grid>().occupied == false)
+            if (hitColliders[i].CompareTag("Grid") && hitColliders[i].GetComponent<Grid>().Occupied == false)
             {
                 float newDistance = (_selected.transform.position - hitColliders[i].transform.position).magnitude;
                 // Debug.Log(newDistance);
@@ -145,14 +140,19 @@ public class ChessController : MonoBehaviour
         {
             GameManager.Instance.ListEnemy.Remove(gameObject);
             GameManager.Instance.CheckWin();
-            GameManager.Instance.ChangeUp(GameManager.Instance.RaycastCheck.Check().transform.GetComponent<ChessController>().ChessPiece == ChessPiece.King);
-            if (gameObject.GetComponent<ChessController>().ChessPiece == ChessPiece.King)
+            GameManager.Instance.ChangeUp(_chessPiece == ChessPiece.King);
+            if (_chessPiece == ChessPiece.King)
             {
                 GameManager.Instance.GameWin();
             }
         }
-        else{
-            GameManager.Instance.GameOver();
+        else if (_chessTeam == ChessTeam.Player)
+        {
+            GameManager.Instance.ListPlayer.Remove(gameObject);
+            if (_chessPiece == ChessPiece.King)
+            {
+                GameManager.Instance.GameOver();
+            }
         }
         Destroy(gameObject);
     }

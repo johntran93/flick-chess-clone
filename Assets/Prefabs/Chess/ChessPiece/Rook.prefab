@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2562310149629419666}
   - component: {fileID: 117007907432251768}
   - component: {fileID: 5090967993148115023}
-  - component: {fileID: -2510223861438234179}
   m_Layer: 3
   m_Name: Rook
   m_TagString: Untagged
@@ -134,18 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chessPiece: 2
   _chessTeam: 1
---- !u!114 &-2510223861438234179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2562310149629419667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91461ab57a7f75441ab612078b8c0b63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2673175621507839964
 GameObject:
   m_ObjectHideFlags: 0

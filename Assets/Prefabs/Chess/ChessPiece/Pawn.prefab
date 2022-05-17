@@ -257,7 +257,6 @@ GameObject:
   - component: {fileID: 3662617315527952177}
   - component: {fileID: 610695853907110255}
   - component: {fileID: -3510633694745152954}
-  - component: {fileID: 3058680146635443983}
   m_Layer: 3
   m_Name: Pawn
   m_TagString: Untagged
@@ -378,18 +377,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chessPiece: 1
   _chessTeam: 1
---- !u!114 &3058680146635443983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3662617315527952182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91461ab57a7f75441ab612078b8c0b63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3746428968051743499
 GameObject:
   m_ObjectHideFlags: 0
