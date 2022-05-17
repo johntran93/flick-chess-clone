@@ -17,6 +17,7 @@ public class ChessController : MonoBehaviour
     private Vector3 mousePressDownPos;
     private Vector3 mouseReleasePos;
     private Vector3 _colliderPos;
+    private Rigidbody _rb;
 
     public ChessTeam ChessTeam
     {
@@ -32,6 +33,7 @@ public class ChessController : MonoBehaviour
     public ChessPiece ChessPiece => _chessPiece;
     void Start()
     {
+        _rb = GetComponent<Rigidbody>();
         if (gameObject.GetComponent<ChessController>().ChessTeam == ChessTeam.Enemy)
         {
             gameObject.GetComponent<Renderer>().material.color = Color.red;
@@ -43,7 +45,7 @@ public class ChessController : MonoBehaviour
     }
     void Update()
     {
-        if (gameObject.transform.position.y < 2f && gameObject.GetComponent<ChessController>().ChessTeam == ChessTeam.Enemy)
+        if (gameObject.transform.position.y < 2f && _chessTeam == ChessTeam.Enemy)
         {
             Die();
         }
@@ -51,11 +53,11 @@ public class ChessController : MonoBehaviour
         if (GameManager.Instance.GameIsPlay == false)
         {
             MovingSelectedOldInput();
-            GetComponent<Rigidbody>().isKinematic = true;
+           _rb.isKinematic = true;
         }
         else
         {
-            GetComponent<Rigidbody>().isKinematic = false;
+            _rb.isKinematic = false;
         }
         if ((gameObject.transform.position.y < 2f) && _chessTeam == ChessTeam.Player)
         {
