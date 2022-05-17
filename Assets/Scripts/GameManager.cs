@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     private bool _gameIsWin;
     private GameObject _currentChose;
-    
+
     private bool _gameIsPlay;
     private List<GameObject> _listEnemy = new List<GameObject>();
     [SerializeField] private List<GameObject> _listChessPlayer = new List<GameObject>();
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         _gameIsPlay = false;
+        _gameIsWin = false;
     }
     public void Shoot(Vector3 force, Rigidbody rb)
     {
@@ -86,26 +87,34 @@ public class GameManager : MonoBehaviour
         }
         _currentChose = null;
     }
-    public void SetGameIsPlay(){
+    public void SetGameIsPlay()
+    {
         _gameIsPlay = true;
     }
     public void CheckWin()
-    {     
+    {
         if (_listEnemy.Count == 0)
         {
             foreach (var item in _listChessPlayer)
             {
                 Vector3 pos = item.transform.position;
-                pos.y =  item.transform.position.y + 1;
+                pos.y = item.transform.position.y + 1;
                 Instantiate(_particleSystem, item.transform.position, Quaternion.identity);
                 Instantiate(_crownWinGame, pos, Quaternion.identity);
-                
             }
-
+            _gameIsWin = true;
             Debug.Log(" ------ Win game ------- ");
         }
-      //Debug.Log(" So quan con song :" + _listPlayer.Count);
+        //Debug.Log(" So quan con song :" + _listPlayer.Count);
     }
 
+    public void GameWin()
+    {
+      //  foreach()
+    }
+    public void GameOver()
+    {
+        Debug.Log(" ------ GameOver ------- ");
+    }
 }
 

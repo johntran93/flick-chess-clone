@@ -22,6 +22,7 @@ public class RaycastCheck : MonoBehaviour
         RaycastHit hitInfo ;
             if (Physics.Raycast(ray,out hitInfo,100,mask))
             {
+                //Debug.Log("Hit is : " + hitInfo.transform.GetComponent<ChessController>().ChessPiece);
                     hit = hitInfo; 
             }
         return hit;
