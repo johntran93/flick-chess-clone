@@ -28,6 +28,8 @@ public class MouseInput : MonoBehaviour,IDragHandler, IBeginDragHandler,IEndDrag
     public void OnEndDrag(PointerEventData eventData)
     {
         _currentDistance = Vector3.Distance(_mousePressDownPos,_mouseReleasePos);
+        if(GameManager.Instance.RaycastCheck.Check().transform == null)
+        return;
         if(_currentDistance > 70)
         {
         GameManager.Instance.Shoot(_mousePressDownPos-_mouseReleasePos,GameManager.Instance.RaycastCheck.Check().transform.GetComponent<Rigidbody>());

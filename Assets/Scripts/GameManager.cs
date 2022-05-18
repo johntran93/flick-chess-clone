@@ -55,18 +55,19 @@ public class GameManager : MonoBehaviour
     }
     public void Shoot(Vector3 force, Rigidbody rb)
     {
-        if (_turnRound.IsPlayerTurn && _gameIsPlay)
+        _currentChose = _raycastCheck.Check().transform.gameObject;
+        if (_turnRound.IsPlayerTurn && _gameIsPlay && _currentChose.GetComponent<ChessController>().ChessTeam == ChessTeam.Player)
         {
             rb.AddForce(new Vector3(force.x, 0, force.y) * _forceMultiplier);
             // _turnRound.SetIsPlay(false); 
             _currentChose = null;
             _turnRound.ChangeTeam(false);
         }
+        _currentChose = null;
     }
     public void ChangeUp(bool isKing)
     {
-        // so le tang mass va force  // so chan change GO
-        _currentChose = RaycastCheck.Check().transform.gameObject;
+        _currentChose = _raycastCheck.Check().transform.gameObject;
         Vector3 _currentPos = _currentChose.transform.position;
 
         _forceMultiplier += 1;
