@@ -1816,10 +1816,6 @@ PrefabInstance:
       propertyPath: GameController
       value: 
       objectReference: {fileID: 1302318213}
-    - target: {fileID: 2252193576921256639, guid: 0f38a431428e7764a8b206029367bd18, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2252193577186449299, guid: 0f38a431428e7764a8b206029367bd18, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1907,30 +1903,6 @@ PrefabInstance:
     - target: {fileID: 2252193577186449311, guid: 0f38a431428e7764a8b206029367bd18, type: 3}
       propertyPath: m_Name
       value: UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252193577518979686, guid: 0f38a431428e7764a8b206029367bd18, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252193577536246567, guid: 0f38a431428e7764a8b206029367bd18, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252193577794723131, guid: 0f38a431428e7764a8b206029367bd18, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252193578154441724, guid: 0f38a431428e7764a8b206029367bd18, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252193578156438355, guid: 0f38a431428e7764a8b206029367bd18, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252193578157082184, guid: 0f38a431428e7764a8b206029367bd18, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f38a431428e7764a8b206029367bd18, type: 3}
