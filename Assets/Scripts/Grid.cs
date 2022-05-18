@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
-    public bool _occupied = false;
+    private bool _occupied = false;
     
      public bool Occupied
     {
