@@ -81,7 +81,7 @@ public class Grapping : MonoBehaviour
         float distance = 99999;
         for (int i = 0; i < hitColliders.Length; i++)
         {
-            if (hitColliders[i].tag == "Grid" && hitColliders[i].GetComponent<Grid>()._occupied == false)
+            if (hitColliders[i].tag == "Grid" && hitColliders[i].GetComponent<Grid>().occupied == false)
             {
                 float newDistance = (_selected.transform.position - hitColliders[i].transform.position).magnitude;
                 if (newDistance < distance)
