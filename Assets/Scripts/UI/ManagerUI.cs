@@ -15,6 +15,8 @@ public class ManagerUI : MonoBehaviour
 
     [SerializeField] private MoveThisChessFix _moveChess;
     [SerializeField] private GameManager _gameManager;
+    [SerializeField] private List<ItemColor> _listItem = new List<ItemColor>();
+    public List<ItemColor> ListItem => _listItem;
 
     public MenuUI UIMenu => _menuGame;
     public GameUI UIGamePlay => _playGame;
