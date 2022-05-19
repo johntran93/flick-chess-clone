@@ -24,8 +24,6 @@ public class SpawnFloor : MonoBehaviour
 
         GameObject go = Instantiate(FloorManager.Instance.ListFloor[NumberObject].gameObject);
         go.transform.position = pos;
-
-
     }
     public void SpawnFloorRandom()
     {
