@@ -8,7 +8,7 @@ public class Barries : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         
-         if (gameObject.tag == "Barries")
+         if (gameObject.CompareTag ("Barries"))
         {
             if (other.gameObject.CompareTag("EndBarries"))
             {
