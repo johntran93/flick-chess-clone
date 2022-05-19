@@ -5,18 +5,29 @@ using UnityEngine;
 public class ManagerUI : MonoBehaviour
 {
     public static ManagerUI Instance;
-    [SerializeField] public UI_Menu MenuGame;
-    [SerializeField] public UI_Game PlayGame;
-    [SerializeField] public UI_Setting SettingGame;
-    [SerializeField] public UI_PopupColor PopupColorGame;
-    [SerializeField] public UI_NextRound NextRoundGame;
-    [SerializeField] public UI_PopupWin PopupWinGame;
-    [SerializeField] public UI_PopupLose PopupLoseGame;
+    [SerializeField] private MenuUI _menuGame;
+    [SerializeField] private GameUI _playGame;
+    [SerializeField] private SettingUI _settingGame;
+    [SerializeField] private PopupColorUI _popupColorGame;
+    [SerializeField] private NextRoundUI _nextRoundGame;
+    [SerializeField] private PopupWinUI _popupWinGame;
+    [SerializeField] private PopupLoseUI _popupLoseGame;
 
-    [SerializeField] public MoveThisChessFix MoveChess;
-    [SerializeField] public GameManager GameController;
+    [SerializeField] private MoveThisChessFix _moveChess;
+    [SerializeField] private GameManager _gameManager;
+
+    public MenuUI UIMenu => _menuGame;
+    public GameUI UIGamePlay => _playGame;
+    public SettingUI UISetting => _settingGame;
+    public PopupColorUI UIPopupColor => _popupColorGame;
+    public NextRoundUI UINextRound => _nextRoundGame;
+    public PopupWinUI UIPopupWin => _popupWinGame;
+    public PopupLoseUI UIPopupLose => _popupLoseGame;
+
+    public MoveThisChessFix MoveChess => _moveChess;
+    public GameManager gameManager => _gameManager;
+
    
-    // [SerializeField] public 
 
      private void Awake() {
          if(Instance ==null){
@@ -29,13 +40,13 @@ public class ManagerUI : MonoBehaviour
     private void Start() 
     {
         
-        MenuGame.gameObject.SetActive(true);
-        SettingGame.gameObject.SetActive(false);
-        PlayGame.gameObject.SetActive(false);
-        PopupColorGame.gameObject.SetActive(false);
-        NextRoundGame.gameObject.SetActive(false);
-        PopupWinGame.gameObject.SetActive(false);
-        PopupLoseGame.gameObject.SetActive(false);  
+        _menuGame.gameObject.SetActive(true);
+        _settingGame.gameObject.SetActive(false);
+        _playGame.gameObject.SetActive(false);
+        _popupColorGame.gameObject.SetActive(false);
+        _nextRoundGame.gameObject.SetActive(false);
+        _popupWinGame.gameObject.SetActive(false);
+        _popupLoseGame.gameObject.SetActive(false);  
          
     }
     

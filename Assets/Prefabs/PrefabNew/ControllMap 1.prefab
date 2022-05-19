@@ -47,7 +47,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5706892507433887837
 Transform:
   m_ObjectHideFlags: 0
@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4416261393788136803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7399702, y: -5.4199934, z: 53.679993}
+  m_LocalPosition: {x: -0.7399702, y: -5.4199934, z: 58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1212077017090654668}
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be331d12e45fe624894bf5e1bfa596a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelGame: 3
+  LevelGame: 22
   _spawnPos: {fileID: 5025658631057798799}
 --- !u!1 &6047324987128489470
 GameObject:
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be331d12e45fe624894bf5e1bfa596a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelGame: 3
+  LevelGame: 22
   _spawnPos: {fileID: 3889379514942242683}
 --- !u!1 &7451401341243756499
 GameObject:
@@ -683,6 +683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorHexagonLv7
       objectReference: {fileID: 0}
+    - target: {fileID: 2821215088704238864, guid: 2cf812c3c7035aa4b9ce7a0629acbcc3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2821215088704238867, guid: 2cf812c3c7035aa4b9ce7a0629acbcc3, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -745,6 +749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorSquareLv4
       objectReference: {fileID: 0}
+    - target: {fileID: 5597482430666086878, guid: 85e48f4af5b626d4293841bda3c58d91, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5597482430666086879, guid: 85e48f4af5b626d4293841bda3c58d91, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -806,6 +814,10 @@ PrefabInstance:
     - target: {fileID: 3498521149220673312, guid: 5d9c4a0c361785645ad00d78e735e983, type: 3}
       propertyPath: m_Name
       value: FloorSquareLv11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3498521149220673312, guid: 5d9c4a0c361785645ad00d78e735e983, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3498521149220673313, guid: 5d9c4a0c361785645ad00d78e735e983, type: 3}
       propertyPath: m_RootOrder
@@ -913,6 +925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorRectangleLv3
       objectReference: {fileID: 0}
+    - target: {fileID: 1563633090809067163, guid: fcf2b20aadd6dc840bfab4186d5bd585, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcf2b20aadd6dc840bfab4186d5bd585, type: 3}
 --- !u!4 &796459402699062359 stripped
@@ -974,6 +990,10 @@ PrefabInstance:
     - target: {fileID: 3133543942549968763, guid: b87491416772a49478f60ecdad70e754, type: 3}
       propertyPath: m_Name
       value: FloorRectangleLv10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133543942549968763, guid: b87491416772a49478f60ecdad70e754, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b87491416772a49478f60ecdad70e754, type: 3}
@@ -1037,6 +1057,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorCircleLv6
       objectReference: {fileID: 0}
+    - target: {fileID: 6343797278265590116, guid: 3685c96808628284ca2f3e61aef9e7f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3685c96808628284ca2f3e61aef9e7f2, type: 3}
 --- !u!4 &8903849926665582388 stripped
@@ -1054,6 +1078,10 @@ PrefabInstance:
     - target: {fileID: 3320829686749559128, guid: 4e6b5a6bdfae06e41b2ee01acac8ddf1, type: 3}
       propertyPath: m_Name
       value: FloorCircleLv5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320829686749559128, guid: 4e6b5a6bdfae06e41b2ee01acac8ddf1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3320829686749559135, guid: 4e6b5a6bdfae06e41b2ee01acac8ddf1, type: 3}
       propertyPath: m_RootOrder
@@ -1227,6 +1255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorRectangleLv9
       objectReference: {fileID: 0}
+    - target: {fileID: 7160846923086360, guid: 6f320fc517d25c94194dda4bdd5b0900, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f320fc517d25c94194dda4bdd5b0900, type: 3}
 --- !u!4 &5981587497464704104 stripped
@@ -1244,6 +1276,10 @@ PrefabInstance:
     - target: {fileID: 3680090352241787328, guid: f6706f6045d13ab489acd50c913582fd, type: 3}
       propertyPath: m_Name
       value: FloorSquareLv12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680090352241787328, guid: f6706f6045d13ab489acd50c913582fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3680090352241787329, guid: f6706f6045d13ab489acd50c913582fd, type: 3}
       propertyPath: m_RootOrder
@@ -1351,6 +1387,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorHexagonLv8
       objectReference: {fileID: 0}
+    - target: {fileID: 6141726812190839201, guid: 95f07eb23e247b74d812594ea0e2c03a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95f07eb23e247b74d812594ea0e2c03a, type: 3}
 --- !u!4 &1140749661032069727 stripped
@@ -1413,6 +1453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloorHexagonLv2
       objectReference: {fileID: 0}
+    - target: {fileID: 1207192678205953977, guid: 34b321927c0a8d44ca7bff725e28242c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34b321927c0a8d44ca7bff725e28242c, type: 3}
 --- !u!4 &5759979343509209519 stripped
@@ -1430,6 +1474,10 @@ PrefabInstance:
     - target: {fileID: 9153553802995145468, guid: 081dc57b1469b84469f3cd66eb493ef8, type: 3}
       propertyPath: m_Name
       value: FloorCirclelv1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153553802995145468, guid: 081dc57b1469b84469f3cd66eb493ef8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9153553802995145469, guid: 081dc57b1469b84469f3cd66eb493ef8, type: 3}
       propertyPath: m_RootOrder

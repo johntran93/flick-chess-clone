@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   target: {fileID: 409442397252858813}
-  distanceToTarget: 25
+  distanceToTarget: 40
   TurnRoundPlayer: {fileID: 0}
 --- !u!1 &409442396162105868
 GameObject:
@@ -62,7 +62,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &409442396162105859
 Transform:
   m_ObjectHideFlags: 0
@@ -99,7 +99,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &409442396682474984
 Transform:
   m_ObjectHideFlags: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   target: {fileID: 409442396682474984}
-  distanceToTarget: 25
+  distanceToTarget: 40
   TurnRoundPlayer: {fileID: 0}
 --- !u!1 &409442397252858814
 GameObject:
@@ -241,7 +241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &409442397252858813
 Transform:
   m_ObjectHideFlags: 0

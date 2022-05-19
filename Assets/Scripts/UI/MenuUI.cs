@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class UI_Menu : MonoBehaviour
+public class MenuUI : MonoBehaviour
 {
     [SerializeField] private Button _startGame;
     [SerializeField] private Button _createGrid;
@@ -25,18 +25,18 @@ public class UI_Menu : MonoBehaviour
 
     private void StartGame()
     {
-        ManagerUI.Instance.PlayGame.gameObject.SetActive(true);
-        ManagerUI.Instance.MenuGame.gameObject.SetActive(false);
+        ManagerUI.Instance.UIGamePlay.gameObject.SetActive(true);
+        ManagerUI.Instance.UIMenu.gameObject.SetActive(false);
         ManagerUI.Instance.MoveChess.moveChess();
-        ManagerUI.Instance.GameController.SetGameIsPlay();
+        ManagerUI.Instance.gameManager.SetGameIsPlay();
     }
     private void OpenSetting()
     {
-        ManagerUI.Instance.SettingGame.gameObject.SetActive(true);
+        ManagerUI.Instance.UISetting.gameObject.SetActive(true);
     }
     private void ChoosenNewColor()
     {
-        ManagerUI.Instance.PopupColorGame.gameObject.SetActive(true);
+        ManagerUI.Instance.UIPopupColor.gameObject.SetActive(true);
     }
     private void Give1chess()
     {

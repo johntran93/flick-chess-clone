@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_Setting : MonoBehaviour
+public class SettingUI : MonoBehaviour
 {
     [SerializeField] private Button _backMenu;
 
@@ -13,6 +13,6 @@ public class UI_Setting : MonoBehaviour
     }
     private void BackMenu()
     {
-        ManagerUI.Instance.SettingGame.gameObject.SetActive(false);
+        ManagerUI.Instance.UISetting.gameObject.SetActive(false);
     }
 }

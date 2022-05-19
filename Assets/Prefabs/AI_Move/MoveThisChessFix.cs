@@ -45,10 +45,10 @@ public class MoveThisChessFix : MonoBehaviour
         // _chess.DOMove(destinationRound1, 5f);
         for (int i = 0; i < _chess.Count; i++)
         {
-            _chess[i].DOMove(destinationRun1[i].position, 2f)
+            _chess[i].DOMove(destinationRun1[i].position, 3f)
             .OnComplete(() =>
             {
-                AllChess.DOMove(PointRound1.position, 2f)
+                AllChess.DOMove(PointRound1.position, 3f)
                 .OnComplete(() =>
                 {
                     for (int j = 0; j < _chess.Count; j++)
@@ -76,10 +76,10 @@ public class MoveThisChessFix : MonoBehaviour
 
         for (int k = 0; k < _chess.Count; k++)
         {
-            _chess[k].DOMove(destinationRun2[k].position, 2f)
+            _chess[k].DOMove(destinationRun2[k].position, 3f)
             .OnComplete(() =>
             {
-                AllChess.DOMove(PointRound2.position, 2f)
+                AllChess.DOMove(PointRound2.position, 3f)
                 .OnComplete(() =>
                 {
                     for (int h = 0; h < _chess.Count; h++)

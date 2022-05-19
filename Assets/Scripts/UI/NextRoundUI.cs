@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_NextRound : MonoBehaviour
+public class NextRoundUI : MonoBehaviour
 {
     [SerializeField] private Button _continue;
 
@@ -13,7 +13,7 @@ public class UI_NextRound : MonoBehaviour
     }
     private void NextMap()
     {
-        ManagerUI.Instance.NextRoundGame.gameObject.SetActive(false);
+        ManagerUI.Instance.UINextRound.gameObject.SetActive(false);
         ManagerUI.Instance.MoveChess.moveChess2();
     }
 

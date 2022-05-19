@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_PopupColor : MonoBehaviour
+public class PopupColorUI : MonoBehaviour
 {
 
     [SerializeField] private Button _openRandom;
@@ -20,6 +20,6 @@ public class UI_PopupColor : MonoBehaviour
     }
     private void BackMenu()
     {
-        ManagerUI.Instance.PopupColorGame.gameObject.SetActive(false);
+        ManagerUI.Instance.UIPopupColor.gameObject.SetActive(false);
     }
 }

@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class UI_PopupWin : MonoBehaviour
+public class PopupLoseUI : MonoBehaviour
 {
     [SerializeField] private Button _continue;
 
     private void OnEnable()
     {   
-        _continue.onClick.AddListener(NextLevel);
+        _continue.onClick.AddListener(BackLevel);
     }
-    private void NextLevel()
+    private void BackLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
