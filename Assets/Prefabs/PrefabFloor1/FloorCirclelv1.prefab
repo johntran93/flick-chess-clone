@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9153553802289400527}
   m_Layer: 0
   m_Name: Barrier (3)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 9153553802527568926}
   m_Layer: 0
   m_Name: Barrier (7)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 9153553802577429099}
   m_Layer: 0
   m_Name: FloorFeet
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 9153553802621150684}
   m_Layer: 0
   m_Name: Barrier (6)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 9153553802640914348}
   m_Layer: 0
   m_Name: Barrier (10)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 9153553802670194318}
   m_Layer: 0
   m_Name: PointKing
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 9153553802758308272}
   m_Layer: 0
   m_Name: Barrier (2)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -767,7 +767,7 @@ GameObject:
   - component: {fileID: 9153553802868853114}
   m_Layer: 0
   m_Name: Barrier (11)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -887,7 +887,7 @@ GameObject:
   - component: {fileID: 9153553802889833088}
   m_Layer: 0
   m_Name: BarrierAll
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -929,7 +929,7 @@ GameObject:
   - component: {fileID: 9153553802910465966}
   m_Layer: 0
   m_Name: Point
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -960,7 +960,7 @@ GameObject:
   - component: {fileID: 9153553802995145466}
   m_Layer: 0
   m_Name: FloorCirclelv1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 9153553803241183676}
   m_Layer: 0
   m_Name: Barrier (17)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1136,7 +1136,7 @@ GameObject:
   - component: {fileID: 9153553803274171385}
   m_Layer: 0
   m_Name: Point
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1167,7 +1167,7 @@ GameObject:
   - component: {fileID: 9153553803448805977}
   m_Layer: 0
   m_Name: ListMesh
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1222,7 +1222,7 @@ GameObject:
   - component: {fileID: 9153553803451546987}
   m_Layer: 0
   m_Name: FloorBattle
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1320,7 +1320,7 @@ GameObject:
   - component: {fileID: 9153553803635242888}
   m_Layer: 0
   m_Name: Barrier (5)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1445,7 +1445,7 @@ GameObject:
   - component: {fileID: 9153553803686051554}
   m_Layer: 0
   m_Name: Barrier (13)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1566,7 +1566,7 @@ GameObject:
   - component: {fileID: 9153553803839063999}
   m_Layer: 0
   m_Name: SpawnBot
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1620,7 +1620,7 @@ GameObject:
   - component: {fileID: 9153553803979862403}
   m_Layer: 0
   m_Name: Barrier (15)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1745,7 +1745,7 @@ GameObject:
   - component: {fileID: 9153553804248506416}
   m_Layer: 0
   m_Name: Barrier (1)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1870,7 +1870,7 @@ GameObject:
   - component: {fileID: 9153553804328874507}
   m_Layer: 0
   m_Name: Barrier (14)
-  m_TagString: Barries
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

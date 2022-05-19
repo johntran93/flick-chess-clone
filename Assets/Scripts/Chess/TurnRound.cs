@@ -26,7 +26,7 @@ public class TurnRound : MonoBehaviour
     }
     IEnumerator CheckTurnPlayer()
     {   
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
             IsPlayerTurn = true;
     }
     public void ChangeTeam(bool isPlayerTurn)

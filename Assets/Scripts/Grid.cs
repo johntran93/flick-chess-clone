@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
-    private bool _occupied = false;
+    private bool _occupied;
+    private Material _old;
     
      public bool Occupied
     {
@@ -17,10 +18,17 @@ public class Grid : MonoBehaviour
             _occupied = value;
         }
     }
-    private void Update() {
-        if(_occupied){
-            
+    private void Awake() {
+        _occupied = false;
+        _old = GetComponent<MeshRenderer>().material;
+    }
+    public void SetOccupied(bool occupied) {
+        Occupied = occupied;
+        if(_occupied){ 
                 GetComponent<MeshRenderer>().material = GameManager.Instance.Material;
+        }
+        else if(!_occupied){
+            GetComponent<MeshRenderer>().material = _old;
         }
     }
 

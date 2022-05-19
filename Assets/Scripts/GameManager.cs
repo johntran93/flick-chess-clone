@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    #region  Private
+    #region Private
     public static GameManager Instance;
     [SerializeField] private MouseInput _mouseInput;
     [SerializeField] private ListMesh _listMesh;
@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GridPlace _girdPlace;
     [SerializeField] private Material _material;
     [SerializeField] private CamMovement _cam;
+    [SerializeField] private Data _data;
+    [SerializeField] private ShowGrid _listGrid;
 
     private bool _gameIsWin;
     private GameObject _currentChose;
@@ -24,11 +26,12 @@ public class GameManager : MonoBehaviour
     private bool _gameIsPlay;
     private List<GameObject> _listEnemy = new List<GameObject>();
     [SerializeField] private List<GameObject> _listChessPlayer = new List<GameObject>();
+    
 
 
     #endregion
 
-    #region  Public
+    #region Public
     public Material Material => _material;
     public CamMovement Cam => _cam;
     public bool GameIsPlay => _gameIsPlay;
@@ -37,8 +40,9 @@ public class GameManager : MonoBehaviour
     public MouseInput MouseInput => _mouseInput;
     public ListMesh ListMesh => _listMesh;
     public RaycastCheck RaycastCheck => _raycastCheck;
-    public List<GameObject> ListEnemy { get { return _listEnemy; } set { value = _listEnemy; } }
-    public List<GameObject> ListPlayer { get { return _listChessPlayer; } set { value = _listChessPlayer; } }
+    public List<GameObject> ListEnemy { get { return _listEnemy; } set { _listEnemy = value; } }
+    public List<GameObject> ListPlayer { get { return _listChessPlayer; } set { _listChessPlayer = value; } }
+    public ShowGrid ShowGrid { get { return _listGrid; } set { _listGrid = value; } }
     #endregion
     private void Awake()
     {
@@ -55,12 +59,10 @@ public class GameManager : MonoBehaviour
     }
     public void Shoot(Vector3 force, Rigidbody rb)
     {
-        _currentChose = _raycastCheck.Check().transform.gameObject;
-        if (_turnRound.IsPlayerTurn && _gameIsPlay && _currentChose.GetComponent<ChessController>().ChessTeam == ChessTeam.Player)
+        
+        if (_turnRound.IsPlayerTurn && _gameIsPlay && rb.GetComponent<ChessController>().ChessTeam == ChessTeam.Player && !_gameIsWin)
         {
-            rb.AddForce(new Vector3(force.x, 0, force.y) * _forceMultiplier);
-            // _turnRound.SetIsPlay(false); 
-            _currentChose = null;
+            rb.AddForce(new Vector3(force.x, 0, force.y) * _forceMultiplier); 
             _turnRound.ChangeTeam(false);
         }
         _currentChose = null;
@@ -90,7 +92,9 @@ public class GameManager : MonoBehaviour
     }
     public void SetGameIsPlay()
     {
+
         _gameIsPlay = true;
+
     }
     public void CheckWin()
     {
@@ -111,7 +115,14 @@ public class GameManager : MonoBehaviour
 
     public void GameWin()
     {
-      //  foreach()
+        _gameIsWin = true;
+        foreach (var item in _listChessPlayer)
+        {
+            Vector3 pos = item.transform.position;
+            pos.y = item.transform.position.y + 1;
+            Instantiate(_particleSystem, item.transform.position, Quaternion.identity);
+        }
+        Instantiate(_crownWinGame,new Vector3(_listChessPlayer[0].transform.position.x,_listChessPlayer[0].transform.position.y + 1, _listChessPlayer[0].transform.position.z), Quaternion.identity);
     }
     public void GameOver()
     {

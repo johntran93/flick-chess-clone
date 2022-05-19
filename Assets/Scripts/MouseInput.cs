@@ -9,6 +9,7 @@ public class MouseInput : MonoBehaviour,IDragHandler, IBeginDragHandler,IEndDrag
     private Vector3 _mouseReleasePos;
     private Vector3 forceDir ;
     private float _currentDistance;
+    private Transform _currentChose ;
     public void OnBeginDrag(PointerEventData eventData)
     {
         _mousePressDownPos = Input.mousePosition;
@@ -26,13 +27,14 @@ public class MouseInput : MonoBehaviour,IDragHandler, IBeginDragHandler,IEndDrag
     }
 
     public void OnEndDrag(PointerEventData eventData)
-    {
+    {   _currentChose = GameManager.Instance.RaycastCheck.Check().transform;
         _currentDistance = Vector3.Distance(_mousePressDownPos,_mouseReleasePos);
         if(GameManager.Instance.RaycastCheck.Check().transform == null)
         return;
         if(_currentDistance > 70)
         {
-        GameManager.Instance.Shoot(_mousePressDownPos-_mouseReleasePos,GameManager.Instance.RaycastCheck.Check().transform.GetComponent<Rigidbody>());
+        GameManager.Instance.Shoot(_mousePressDownPos-_mouseReleasePos,_currentChose.GetComponent<Rigidbody>());
         }
+        _currentChose = null;
     }
 }
